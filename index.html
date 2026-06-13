@@ -11039,7 +11039,7 @@
                 const effectSpec = RapidMeta.resolveEffectMeasure({ trials });
                 if (effectSpec.effective === 'HR') {
                     const hrTrials = trials.filter(t => RapidMeta.trialHasPublishedHR(t));
-                    const rScript = `# RapidMeta v14.0 R-Validation (DL + HKSJ + Bayesian) â€” HR
+                    const rScript = `# RapidMeta v14.0 R-Validation (DL + HKSJ + Bayesian) — HR
 library(metafor)
 dat <- data.frame(
   trial = c(${hrTrials.map(t=>`"${escStr(t.data?.name || t.id)}"`).join(',')}),
